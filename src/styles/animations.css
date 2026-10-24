@@ -1,0 +1,81 @@
+/* Standalone keyframes + helper animation classes shared across the app. */
+
+/* ---------------------------------- Marquee --------------------------------- */
+.marquee-track {
+  animation: var(--animate-marquee);
+}
+
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+/* ------------------------------- Custom cursor ------------------------------- */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  border-radius: 9999px;
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background-color: var(--color-primary-container);
+  transition: opacity 0.3s;
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border: 1px solid color-mix(in srgb, var(--color-primary-container) 40%, transparent);
+  transition:
+    opacity 0.3s,
+    width 0.15s ease-out,
+    height 0.15s ease-out,
+    margin 0.15s ease-out,
+    background-color 0.15s ease-out,
+    border-color 0.15s ease-out;
+}
+
+.cursor-ring.is-expanded {
+  width: 48px;
+  height: 48px;
+  margin: -24px 0 0 -24px;
+  background-color: color-mix(in srgb, var(--color-primary-container) 10%, transparent);
+  border-color: var(--color-primary-container);
+}
+
+.cursor-dot.is-visible,
+.cursor-ring.is-visible {
+  opacity: 1;
+}
+
+/* --------------------------- Reduced motion support -------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee-track,
+  .marquee-track:hover,
+  .marquee-track:focus-within {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <title>Studytainment — Learning Should Never Feel Like a Burden</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#93000a", "surface-container-high": "#e6e8ef", "primary-fixed-dim": "#ffb4a4", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "outline": "#8f7069", "outline-variant": "#e4beb6", "secondary-fixed": "#ffdea7", "surface-dim": "#d8dae1", "on-secondary-fixed-variant": "#5e4200", "on-primary-fixed-variant": "#8c1800", "primary": "#b72301", "on-surface": "#191c21", "surface": "#f8f9ff", "on-background": "#191c21", "on-tertiary-fixed-variant": "#185040", "surface-variant": "#e1e2e9", "on-secondary-fixed": "#271900", "inverse-on-surface": "#eff0f7", "surface-container-lowest": "#ffffff", "tertiary-container": "#679c89", "tertiary-fixed": "#b6eed9", "surface-container-low": "#f2f3fa", "on-primary-fixed": "#3d0600", "on-primary-container": "#580c00", "primary-fixed": "#ffdad3", "on-tertiary-fixed": "#002118", "surface-tint": "#b72301", "on-secondary-container": "#715000", "on-primary": "#ffffff", "inverse-primary": "#ffb4a4", "tertiary-fixed-dim": "#9bd2be", "surface-container": "#ecedf5", "error": "#ba1a1a", "on-secondary": "#ffffff", "background": "#f8f9ff", "primary-container": "#ff5733", "error-container": "#ffdad6", "secondary-container": "#fdc350", "tertiary": "#336857", "secondary-fixed-dim": "#f7bd4b", "on-tertiary-container": "#003125", "inverse-surface": "#2e3036", "on-tertiary": "#ffffff", "secondary": "#7c5800", "on-surface-variant": "#5b403a", "surface-container-highest": "#e1e2e9" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "gutter": "1rem", "margin-md": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter-lg": "2rem", "margin": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-lg": "3rem", "gutter-md": "1.5rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-md-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "display": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "title": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md-mobile": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body
+    class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(24,27,32,0.04)]">
+        <div
+            class="h-20 max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-xs group"
+                    data-path="ecosystem" href="#"><span
+                        class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_10px_#ff5733] transition-transform duration-300 group-hover:scale-125"></span><span
+                        class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">Studytainment</span></a>
+            </div>
+            <nav class="hidden lg:flex items-center gap-space-xs p-space-xs bg-surface-container-low/60 rounded-xl"
+                data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg"><a
+                    aria-current="page"
+                    class="px-space-md py-space-sm transition-all bg-surface-container-high text-on-surface font-semibold rounded-lg"
+                    data-path="ecosystem" href="#">Ecosystem</a><a
+                    class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 rounded-lg transition-all"
+                    data-path="the-4-modes" href="#">The 4 Modes</a><a
+                    class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 rounded-lg transition-all"
+                    data-path="3-30-continuum" href="#">3-30 Continuum</a><a
+                    class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 rounded-lg transition-all"
+                    data-path="impact" href="#">Impact</a><a
+                    class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/70 rounded-lg transition-all"
+                    data-path="stories" href="#">Stories</a></nav>
+            <div class="flex items-center gap-space-md"><button aria-label="Ambient Audio Toggle"
+                    class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all group"
+                    type="button"><span
+                        class="material-symbols-outlined text-[20px] text-tertiary group-hover:scale-110 transition-transform">graphic_eq</span><span
+                        class="font-label-sm text-label-sm uppercase tracking-wider">Focus Sound</span></button><a
+                    class="hidden md:inline-flex items-center justify-center px-space-lg py-space-sm bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:shadow-md transition-all active:translate-y-0.5"
+                    data-path="explore-pathways" href="#">Explore Pathways</a>
+                <div
+                    class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm cursor-pointer hover:ring-2 hover:ring-primary-container transition-all">
+                    <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
+        <div class="flex flex-col w-full relative selection:bg-primary-container selection:text-on-primary">
+            <!-- Interactive Custom Cursor Layer -->
+            <div class="fixed top-0 left-0 w-2 h-2 rounded-full bg-primary-container pointer-events-none z-[100] transition-opacity duration-300 opacity-0 -translate-x-1/2 -translate-y-1/2"
+                id="st-cursor-dot"></div>
+            <div class="fixed top-0 left-0 w-8 h-8 rounded-full border border-primary-container/40 pointer-events-none z-[100] transition-all duration-150 ease-out opacity-0 -translate-x-1/2 -translate-y-1/2"
+                id="st-cursor-ring"></div>
+            <!-- Ambient Backdrop Glows -->
+            <div
+                class="absolute top-12 left-1/4 w-[460px] h-[460px] bg-secondary-container/20 rounded-full blur-3xl pointer-events-none -z-10">
+            </div>
+            <div
+                class="absolute top-96 right-10 w-[520px] h-[520px] bg-primary-container/10 rounded-full blur-[100px] pointer-events-none -z-10">
+            </div>
+            <div
+                class="absolute top-[1800px] left-10 w-[600px] h-[600px] bg-tertiary-fixed/30 rounded-full blur-[120px] pointer-events-none -z-10">
+            </div>
+            <!-- SECTION 1: Kinetic Hero with Layered 3D Scene -->
+            <section
+                class="relative w-full min-h-[942px] flex items-center overflow-hidden px-margin md:px-margin-md lg:px-margin-lg pt-space-xl pb-space-xl">
+                <!-- 3D Three.js Scene Layer -->
+                <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                    <!-- STITCH_THREEJS_START:ANIMATION_5 class="absolute inset-0 w-full h-full pointer-events-auto" -->
+                    <div class="absolute inset-0 w-full h-full pointer-events-auto" style="display:block;">
+                        <script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+                        <div id="threejs-container-ANIMATION_5" style="width:100%;height:100%"></div>
+                        <script>
+                            (function () {
+                                const container = document.getElementById('threejs-container-ANIMATION_5');
+                                const devicePixelRatio = window.devicePixelRatio || 1;
+                                // Three.js Interactive Floating Learning Sculpture & Particle Nebula for Studytainment
+                                const width = container.clientWidth || window.innerWidth;
+                                const height = container.clientHeight || window.innerHeight;
+
+                                const scene = new THREE.Scene();
+                                const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
+                                camera.position.set(0, 0, 7.5);
+
+                                const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
+                                renderer.setSize(width, height);
+                                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                                container.appendChild(renderer.domElement);
+
+                                // Lighting setup - warm sunlight + cool fill + ambient
+                                const ambientLight = new THREE.AmbientLight(0xfff5ea, 1.4);
+                                scene.add(ambientLight);
+
+                                const dirLight = new THREE.DirectionalLight(0xff5733, 2.2);
+                                dirLight.position.set(6, 8, 6);
+                                scene.add(dirLight);
+
+                                const blueRimLight = new THREE.DirectionalLight(0x38bdf8, 1.6);
+                                blueRimLight.position.set(-6, -4, -3);
+                                scene.add(blueRimLight);
+
+                                const pointLight = new THREE.PointLight(0xfbbf24, 2.5, 12);
+                                pointLight.position.set(0, 1, 2);
+                                scene.add(pointLight);
+
+                                // Master interactive group
+                                const masterGroup = new THREE.Group();
+                                scene.add(masterGroup);
+
+                                const floatObjects = [];
+
+                                // 1. Floating Open Book / Portal of Curiosity
+                                const bookGroup = new THREE.Group();
+
+                                // Spine & covers
+                                const leftCoverGeo = new THREE.BoxGeometry(0.85, 1.3, 0.08);
+                                const rightCoverGeo = new THREE.BoxGeometry(0.85, 1.3, 0.08);
+                                const coverMaterial = new THREE.MeshPhongMaterial({
+                                    color: 0xff5733,
+                                    shininess: 90,
+                                    specular: 0xffaa88
+                                });
+
+                                const leftCover = new THREE.Mesh(leftCoverGeo, coverMaterial);
+                                leftCover.position.set(-0.43, 0, 0.08);
+                                leftCover.rotation.y = 0.35;
+                                bookGroup.add(leftCover);
+
+                                const rightCover = new THREE.Mesh(rightCoverGeo, coverMaterial);
+                                rightCover.position.set(0.43, 0, 0.08);
+                                rightCover.rotation.y = -0.35;
+                                bookGroup.add(rightCover);
+
+                                // Pages fan
+                                const pageMat = new THREE.MeshPhongMaterial({ color: 0xfdfaf3, shininess: 30 });
+                                for (let i = 0; i < 5; i++) {
+                                    const angle = (i / 4 - 0.5) * 0.5;
+                                    const pageGeo = new THREE.BoxGeometry(0.8, 1.25, 0.015);
+                                    const leftPage = new THREE.Mesh(pageGeo, pageMat);
+                                    leftPage.position.set(-0.4, 0, 0.03 + i * 0.01);
+                                    leftPage.rotation.y = 0.28 + angle * 0.3;
+                                    bookGroup.add(leftPage);
+
+                                    const rightPage = new THREE.Mesh(pageGeo, pageMat);
+                                    rightPage.position.set(0.4, 0, 0.03 + i * 0.01);
+                                    rightPage.rotation.y = -0.28 - angle * 0.3;
+                                    bookGroup.add(rightPage);
+                                }
+
+                                bookGroup.position.set(-1.1, 0.5, 0.6);
+                                bookGroup.rotation.set(0.2, 0.4, -0.15);
+                                masterGroup.add(bookGroup);
+                                floatObjects.push({
+                                    mesh: bookGroup,
+                                    rotSpeed: { x: 0.005, y: 0.008, z: 0.003 },
+                                    floatSpeed: 1.6,
+                                    offset: 0,
+                                    basePos: { x: -1.1, y: 0.5, z: 0.6 }
+                                });
+
+                                // 2. Crystalline Discovery Prism (Icosahedron with glowing inner core)
+                                const prismGroup = new THREE.Group();
+                                const prismGeo = new THREE.IcosahedronGeometry(0.7, 0);
+                                const prismMat = new THREE.MeshPhongMaterial({
+                                    color: 0x38bdf8,
+                                    emissive: 0x0284c7,
+                                    emissiveIntensity: 0.35,
+                                    shininess: 100,
+                                    transparent: true,
+                                    opacity: 0.88,
+                                    flatShading: true
+                                });
+                                const prism = new THREE.Mesh(prismGeo, prismMat);
+                                prismGroup.add(prism);
+
+                                // Inner golden seed
+                                const coreGeo = new THREE.OctahedronGeometry(0.3, 0);
+                                const coreMat = new THREE.MeshBasicMaterial({ color: 0xfef08a, wireframe: true });
+                                const core = new THREE.Mesh(coreGeo, coreMat);
+                                prismGroup.add(core);
+
+                                prismGroup.position.set(1.5, 0.8, 0.4);
+                                prismGroup.rotation.set(-0.3, 0.5, 0.2);
+                                masterGroup.add(prismGroup);
+                                floatObjects.push({
+                                    mesh: prismGroup,
+                                    rotSpeed: { x: -0.009, y: 0.014, z: 0.006 },
+                                    floatSpeed: 2.1,
+                                    offset: 1.8,
+                                    basePos: { x: 1.5, y: 0.8, z: 0.4 }
+                                });
+
+                                // 3. Golden Spark of Mastery (Stellated Polyhedron / Star)
+                                const sparkGroup = new THREE.Group();
+                                const starGeo = new THREE.OctahedronGeometry(0.5, 0);
+                                const starMat = new THREE.MeshPhongMaterial({
+                                    color: 0xf59e0b,
+                                    emissive: 0xd97706,
+                                    emissiveIntensity: 0.5,
+                                    shininess: 95
+                                });
+                                const sparkMesh = new THREE.Mesh(starGeo, starMat);
+                                sparkGroup.add(sparkMesh);
+
+                                // Orbiting Halo ring
+                                const haloGeo = new THREE.TorusGeometry(0.85, 0.03, 16, 40);
+                                const haloMat = new THREE.MeshBasicMaterial({ color: 0xfde68a, transparent: true, opacity: 0.75 });
+                                const halo = new THREE.Mesh(haloGeo, haloMat);
+                                halo.rotation.x = Math.PI / 2.5;
+                                sparkGroup.add(halo);
+
+                                sparkGroup.position.set(1.6, -1.2, 0.8);
+                                masterGroup.add(sparkGroup);
+                                floatObjects.push({
+                                    mesh: sparkGroup,
+                                    rotSpeed: { x: 0.015, y: 0.022, z: -0.01 },
+                                    floatSpeed: 2.4,
+                                    offset: 3.2,
+                                    basePos: { x: 1.6, y: -1.2, z: 0.8 }
+                                });
+
+                                // 4. Stylus / Creative Wand
+                                const stylusGroup = new THREE.Group();
+                                const shaftGeo = new THREE.CylinderGeometry(0.08, 0.08, 1.8, 8);
+                                const shaftMat = new THREE.MeshPhongMaterial({ color: 0x1e293b, shininess: 80 });
+                                const shaft = new THREE.Mesh(shaftGeo, shaftMat);
+                                stylusGroup.add(shaft);
+
+                                const nibGeo = new THREE.ConeGeometry(0.08, 0.35, 8);
+                                const nibMat = new THREE.MeshPhongMaterial({ color: 0xff5733, shininess: 100 });
+                                const nib = new THREE.Mesh(nibGeo, nibMat);
+                                nib.position.y = 1.05;
+                                stylusGroup.add(nib);
+
+                                const capGeo = new THREE.CylinderGeometry(0.09, 0.09, 0.3, 8);
+                                const capMat = new THREE.MeshPhongMaterial({ color: 0xfbbf24, shininess: 100 });
+                                const cap = new THREE.Mesh(capGeo, capMat);
+                                cap.position.y = -0.8;
+                                stylusGroup.add(cap);
+
+                                stylusGroup.position.set(-1.6, -1.1, 0.3);
+                                stylusGroup.rotation.set(0.6, -0.4, 0.8);
+                                masterGroup.add(stylusGroup);
+                                floatObjects.push({
+                                    mesh: stylusGroup,
+                                    rotSpeed: { x: 0.01, y: -0.015, z: 0.007 },
+                                    floatSpeed: 1.8,
+                                    offset: 4.5,
+                                    basePos: { x: -1.6, y: -1.1, z: 0.3 }
+                                });
+
+                                // 5. Gyroscopic Continuum Torus Rings
+                                const gyroGroup = new THREE.Group();
+                                const ring1Geo = new THREE.TorusGeometry(0.6, 0.04, 16, 50);
+                                const ring1Mat = new THREE.MeshPhongMaterial({ color: 0x10b981, shininess: 80 });
+                                const ring1 = new THREE.Mesh(ring1Geo, ring1Mat);
+                                gyroGroup.add(ring1);
+
+                                const ring2Geo = new THREE.TorusGeometry(0.44, 0.035, 16, 40);
+                                const ring2Mat = new THREE.MeshPhongMaterial({ color: 0x6366f1, shininess: 80 });
+                                const ring2 = new THREE.Mesh(ring2Geo, ring2Mat);
+                                ring2.rotation.x = Math.PI / 3;
+                                gyroGroup.add(ring2);
+
+                                gyroGroup.position.set(0.1, -1.8, -0.5);
+                                masterGroup.add(gyroGroup);
+                                floatObjects.push({
+                                    mesh: gyroGroup,
+                                    rotSpeed: { x: 0.012, y: 0.018, z: 0.014 },
+                                    floatSpeed: 1.9,
+                                    offset: 2.1,
+                                    basePos: { x: 0.1, y: -1.8, z: -0.5 }
+                                });
+
+                                // Vibrant Ambient Particle Constellation
+                                const particleCount = 140;
+                                const partPositions = new Float32Array(particleCount * 3);
+                                const partColors = new Float32Array(particleCount * 3);
+
+                                const colorPalette = [
+                                    new THREE.Color(0xff5733),
+                                    new THREE.Color(0xfbbf24),
+                                    new THREE.Color(0x38bdf8),
+                                    new THREE.Color(0x10b981),
+                                    new THREE.Color(0xa855f7)
+                                ];
+
+                                for (let i = 0; i < particleCount; i++) {
+                                    const i3 = i * 3;
+                                    partPositions[i3] = (Math.random() - 0.5) * 14;
+                                    partPositions[i3 + 1] = (Math.random() - 0.5) * 12;
+                                    partPositions[i3 + 2] = (Math.random() - 0.5) * 7 - 0.5;
+
+                                    const c = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+                                    partColors[i3] = c.r;
+                                    partColors[i3 + 1] = c.g;
+                                    partColors[i3 + 2] = c.b;
+                                }
+
+                                const particleGeo = new THREE.BufferGeometry();
+                                particleGeo.setAttribute('position', new THREE.BufferAttribute(partPositions, 3));
+                                particleGeo.setAttribute('color', new THREE.BufferAttribute(partColors, 3));
+
+                                // Soft circular glow sprite canvas
+                                const spriteCanvas = document.createElement('canvas');
+                                spriteCanvas.width = 64;
+                                spriteCanvas.height = 64;
+                                const sCtx = spriteCanvas.getContext('2d');
+                                const gradient = sCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
+                                gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+                                gradient.addColorStop(0.35, 'rgba(255, 255, 255, 0.6)');
+                                gradient.addColorStop(0.7, 'rgba(255, 255, 255, 0.15)');
+                                gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                                sCtx.fillStyle = gradient;
+                                sCtx.beginPath();
+                                sCtx.arc(32, 32, 32, 0, Math.PI * 2);
+                                sCtx.fill();
+
+                                const spriteTexture = new THREE.CanvasTexture(spriteCanvas);
+                                const particleMat = new THREE.PointsMaterial({
+                                    size: 0.35,
+                                    vertexColors: true,
+                                    map: spriteTexture,
+                                    transparent: true,
+                                    opacity: 0.8,
+                                    depthWrite: false
+                                });
+
+                                const particleSystem = new THREE.Points(particleGeo, particleMat);
+                                scene.add(particleSystem);
+
+                                // Smooth Cursor & Scroll Physics
+                                let mouseX = 0, mouseY = 0;
+                                let targetMouseX = 0, targetMouseY = 0;
+
+                                function handlePointer(e) {
+                                    const x = e.clientX || (e.touches && e.touches[0].clientX) || (window.innerWidth / 2);
+                                    const y = e.clientY || (e.touches && e.touches[0].clientY) || (window.innerHeight / 2);
+                                    targetMouseX = (x / window.innerWidth - 0.5) * 2;
+                                    targetMouseY = (y / window.innerHeight - 0.5) * 2;
+                                }
+
+                                window.addEventListener('mousemove', handlePointer, { passive: true });
+                                window.addEventListener('touchmove', handlePointer, { passive: true });
+
+                                // Animation Loop
+                                const clock = new THREE.Clock();
+
+                                function animate() {
+                                    requestAnimationFrame(animate);
+                                    const elapsedTime = clock.getElapsedTime();
+
+                                    // Damped pointer follow
+                                    mouseX += (targetMouseX - mouseX) * 0.055;
+                                    mouseY += (targetMouseY - mouseY) * 0.055;
+
+                                    masterGroup.rotation.y = mouseX * 0.55;
+                                    masterGroup.rotation.x = -mouseY * 0.4;
+                                    masterGroup.position.x = mouseX * 0.25;
+                                    masterGroup.position.y = -mouseY * 0.2;
+
+                                    // Animate individual objects
+                                    floatObjects.forEach(obj => {
+                                        obj.mesh.rotation.x += obj.rotSpeed.x;
+                                        obj.mesh.rotation.y += obj.rotSpeed.y;
+                                        obj.mesh.rotation.z += obj.rotSpeed.z;
+                                        obj.mesh.position.y = obj.basePos.y + Math.sin(elapsedTime * obj.floatSpeed + obj.offset) * 0.12;
+                                    });
+
+                                    // Slowly rotate particle field
+                                    particleSystem.rotation.y = elapsedTime * 0.025;
+                                    particleSystem.rotation.x = Math.sin(elapsedTime * 0.015) * 0.08;
+
+                                    renderer.render(scene, camera);
+                                }
+                                animate();
+
+                                // Resize Handler
+                                function onWindowResize() {
+                                    const w = container.clientWidth || window.innerWidth;
+                                    const h = container.clientHeight || window.innerHeight;
+                                    camera.aspect = w / h;
+                                    camera.updateProjectionMatrix();
+                                    renderer.setSize(w, h);
+                                }
+                                window.addEventListener('resize', onWindowResize);
+
+                            })();
+                        </script>
+                    </div>
+                    <!-- STITCH_THREEJS_END:ANIMATION_5 -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-surface via-surface/85 to-transparent pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent pointer-events-none">
+                    </div>
+                </div>
+                <!-- 3D Floating Control Dock -->
+                <div
+                    class="absolute bottom-space-lg right-margin-lg hidden lg:flex items-center gap-space-xs p-space-xs bg-surface-container-lowest/80 backdrop-blur-md rounded-full shadow-md z-20">
+                    <button
+                        class="px-space-sm py-1 rounded-full text-label-sm font-label-sm text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"
+                        id="toggle-3d-wire" type="button">
+                        <span class="material-symbols-outlined text-[14px]">grid_4x4</span> Wireframe
+                    </button>
+                    <button
+                        class="px-space-sm py-1 rounded-full text-label-sm font-label-sm text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1"
+                        id="reset-3d-cam" type="button">
+                        <span class="material-symbols-outlined text-[14px]">restart_alt</span> Reset Pivot
+                    </button>
+                    <div class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse mx-1"></div>
+                    <span class="text-label-sm font-label-sm text-on-surface-variant pr-space-xs">Interactive
+                        Orbit</span>
+                </div>
+                <!-- Hero Content Cluster -->
+                <div class="relative z-10 max-w-[760px] flex flex-col gap-space-md">
+                    <!-- Live Telemetry Tag -->
+                    <div
+                        class="inline-flex items-center gap-space-xs self-start px-space-md py-1 bg-surface-container-lowest/90 backdrop-blur-sm rounded-full shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+                        <span class="font-label-md text-label-md text-on-surface-variant tracking-wide font-medium">
+                            4.98 Rating • 180k+ Active Learners • 94% Retention
+                        </span>
+                    </div>
+                    <!-- Kinetic Split Editorial Title -->
+                    <h1 class="font-display text-display text-on-surface tracking-tight leading-[1.12]">
+                        Learning Should
+                        <span
+                            class="inline-block relative px-space-xs my-1 bg-primary-container text-on-primary rounded-lg shadow-sm transform -rotate-1">
+                            Never Feel
+                        </span>
+                        <br class="hidden sm:inline" />
+                        Like a Burden.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl font-normal leading-relaxed">
+                        Where playful curiosity sparks lifelong mastery. Reimagining human growth from early childhood
+                        wonder to executive leadership across ages 3 to 30 with sensory-grounded, stress-free pedagogy.
+                    </p>
+                    <!-- Action Cluster -->
+                    <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                        <a class="st-magnetic-btn group inline-flex items-center gap-space-sm px-space-xl py-space-md bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-xl shadow-md transition-all active:scale-95"
+                            href="#continuum">
+                            <span>Begin Your Journey</span>
+                            <span
+                                class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+                        </a>
+                        <button
+                            class="inline-flex items-center gap-space-xs px-space-lg py-space-md bg-surface-container-lowest/80 backdrop-blur-sm hover:bg-surface-container text-on-surface font-label-lg text-label-lg rounded-xl shadow-sm transition-all"
+                            id="trigger-tour-modal" type="button">
+                            <span class="material-symbols-outlined text-primary-container text-[20px]"
+                                style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            <span>Explore 3D Artifacts</span>
+                        </button>
+                    </div>
+                    <!-- Footnote Micro Highlights -->
+                    <div class="grid grid-cols-3 gap-space-md pt-space-md border-none">
+                        <div class="flex flex-col">
+                            <span class="font-title text-title text-on-surface font-bold">Ages 3–30</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant">Continuous
+                                Architecture</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-title text-title text-on-surface font-bold">0% Stress</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant">Somatic Intrinsic
+                                Flow</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-title text-title text-on-surface font-bold">42 Nations</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant">Synchronous Guilds</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 2: Infinite Marquee Ticker -->
+            <section
+                class="w-full bg-surface-container-high overflow-hidden py-space-sm select-none shadow-[inset_0_1px_3px_rgba(24,27,32,0.05)]">
+                <div class="flex w-[200%] animate-[marquee_24s_linear_infinite] hover:[animation-play-state:paused]">
+                    <div
+                        class="flex items-center gap-space-xl min-w-full justify-around font-label-lg text-label-lg tracking-widest uppercase text-on-surface-variant font-semibold">
+                        <span>Curiosity Labs</span> •
+                        <span>Neuroscience of Play</span> •
+                        <span>Multimodal Cognition</span> •
+                        <span>Ages 3–30 Continuum</span> •
+                        <span class="text-primary font-bold">0% Graded Anxiety</span> •
+                        <span>Flow-State Academies</span> •
+                        <span>Socratic Live Forums</span> •
+                        <span>Deep Mastery Tracks</span> •
+                    </div>
+                    <div aria-hidden="true"
+                        class="flex items-center gap-space-xl min-w-full justify-around font-label-lg text-label-lg tracking-widest uppercase text-on-surface-variant font-semibold">
+                        <span>Curiosity Labs</span> •
+                        <span>Neuroscience of Play</span> •
+                        <span>Multimodal Cognition</span> •
+                        <span>Ages 3–30 Continuum</span> •
+                        <span class="text-primary font-bold">0% Graded Anxiety</span> •
+                        <span>Flow-State Academies</span> •
+                        <span>Socratic Live Forums</span> •
+                        <span>Deep Mastery Tracks</span> •
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 3: The 4 Dynamic Modes of Learning -->
+            <section
+                class="w-full max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-margin-lg flex flex-col gap-space-xl">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                    <div class="flex flex-col gap-space-xs max-w-2xl">
+                        <span
+                            class="font-label-sm text-label-sm tracking-widest uppercase text-primary font-bold">Dynamic
+                            Orchestration</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">The 4 Interlocking
+                            Modes of Mastery</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Learning bends to human biorhythms. Shift freely across four complementary modalities
+                            calibrated to eradicate cognitive burnout and spark persistent curiosity.
+                        </p>
+                    </div>
+                    <div
+                        class="hidden sm:flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant bg-surface-container px-space-md py-space-xs rounded-full">
+                        <span class="material-symbols-outlined text-[16px] text-primary">touch_app</span> Hover cards to
+                        engage 3D tilt perspective
+                    </div>
+                </div>
+                <!-- 3D Tilt Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-md [perspective:1000px]">
+                    <!-- Card 1 -->
+                    <div
+                        class="st-tilt-card group relative bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 transform-gpu cursor-pointer">
+                        <div class="flex flex-col gap-space-md">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[28px]">toys</span>
+                            </div>
+                            <div class="flex items-center gap-space-xs">
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Ages
+                                    3–12</span>
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Sensory
+                                    Quest</span>
+                            </div>
+                            <h3
+                                class="font-title text-title text-on-surface group-hover:text-primary transition-colors">
+                                Classroom Dynamic</h3>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Tactile, tactile-first quests and cooperative puzzle rooms where early fundamentals in
+                                physics and numeracy feel like playground discoveries.
+                            </p>
+                        </div>
+                        <div class="pt-space-md flex items-center justify-between">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">0 Screen Fatigue</span>
+                            <span
+                                class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="st-tilt-card group relative bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 transform-gpu cursor-pointer">
+                        <div class="flex flex-col gap-space-md">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+                                <span class="material-symbols-outlined text-[28px]">headphones</span>
+                            </div>
+                            <div class="flex items-center gap-space-xs">
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Ages
+                                    10–18</span>
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm">Deep
+                                    Flow</span>
+                            </div>
+                            <h3
+                                class="font-title text-title text-on-surface group-hover:text-secondary transition-colors">
+                                Self-Study Studio</h3>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Autonomous deep-work tracks with gamified streaks, ambient binaural soundscapes, and
+                                gentle peer checkpoints instead of timed exam pressure.
+                            </p>
+                        </div>
+                        <div class="pt-space-md flex items-center justify-between">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">Binaural Audio Labs</span>
+                            <span
+                                class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="st-tilt-card group relative bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 transform-gpu cursor-pointer">
+                        <div class="flex flex-col gap-space-md">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+                                <span class="material-symbols-outlined text-[28px]">groups_3</span>
+                            </div>
+                            <div class="flex items-center gap-space-xs">
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Ages
+                                    14–25</span>
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Live
+                                    Cohorts</span>
+                            </div>
+                            <h3
+                                class="font-title text-title text-on-surface group-hover:text-tertiary transition-colors">
+                                Online Synchronous</h3>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Global real-time debates, Socratic inquiry rings, international team simulations, and
+                                live critiques mentored by domain pioneers.
+                            </p>
+                        </div>
+                        <div class="pt-space-md flex items-center justify-between">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">42 Active Guilds</span>
+                            <span
+                                class="material-symbols-outlined text-tertiary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="st-tilt-card group relative bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 transform-gpu cursor-pointer">
+                        <div class="flex flex-col gap-space-md">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary-fixed-dim flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-[28px]">rocket_launch</span>
+                            </div>
+                            <div class="flex items-center gap-space-xs">
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Ages
+                                    18–30</span>
+                                <span
+                                    class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Executive
+                                    Modular</span>
+                            </div>
+                            <h3
+                                class="font-title text-title text-on-surface group-hover:text-primary transition-colors">
+                                Own Pace Academy</h3>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Venture-grade sprints, algorithmic trading sandboxes, bio-engineering workshops, and
+                                self-directed career architectures for adult pioneers.
+                            </p>
+                        </div>
+                        <div class="pt-space-md flex items-center justify-between">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">Portfolio-Driven</span>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 4: Cinematic Continuum (Sticky Scrubber) -->
+            <section class="w-full bg-surface-container-low py-margin-lg" id="continuum">
+                <div
+                    class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col gap-space-xl">
+                    <!-- Continuum Header -->
+                    <div class="flex flex-col items-center text-center gap-space-xs max-w-2xl mx-auto">
+                        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">The 3
+                            to 30 Evolutionary Arc</span>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">One Seamless
+                            Continuum of Human Growth</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Traditional education cuts learners into fractured silos. Studytainment anchors continuous
+                            cognitive expansion with zero cliff-edges.
+                        </p>
+                    </div>
+                    <!-- Scrubber Stage Navigation Pills -->
+                    <div
+                        class="flex flex-wrap items-center justify-center gap-space-xs p-space-xs bg-surface-container-lowest rounded-2xl shadow-sm max-w-3xl mx-auto">
+                        <button
+                            class="st-stage-btn active px-space-md py-space-xs rounded-xl font-label-lg text-label-lg bg-primary-container text-on-primary transition-all"
+                            data-stage="0" type="button">
+                            1. The Spark (3–7)
+                        </button>
+                        <button
+                            class="st-stage-btn px-space-md py-space-xs rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all"
+                            data-stage="1" type="button">
+                            2. The Explorer (8–13)
+                        </button>
+                        <button
+                            class="st-stage-btn px-space-md py-space-xs rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all"
+                            data-stage="2" type="button">
+                            3. The Catalyst (14–18)
+                        </button>
+                        <button
+                            class="st-stage-btn px-space-md py-space-xs rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all"
+                            data-stage="3" type="button">
+                            4. The Architect (19–24)
+                        </button>
+                        <button
+                            class="st-stage-btn px-space-md py-space-xs rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all"
+                            data-stage="4" type="button">
+                            5. The Master (25–30)
+                        </button>
+                    </div>
+                    <!-- Interactive Stage Viewer Display -->
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center bg-surface-container-lowest rounded-2xl p-space-xl shadow-md min-h-[440px]">
+                        <!-- Left Stage Editorial Narrative -->
+                        <div class="lg:col-span-7 flex flex-col gap-space-md">
+                            <div class="flex items-center gap-space-sm">
+                                <span
+                                    class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center font-title text-title text-primary font-bold"
+                                    id="stage-badge-number">1</span>
+                                <span class="font-label-lg text-label-lg text-primary font-bold"
+                                    id="stage-age-range">Ages 3–7 • Sensory Wonder</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight"
+                                id="stage-title">
+                                The Spark: Somatic Grounding &amp; Natural Wonder
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                                id="stage-desc">
+                                Early neurological pathways develop most durably when learning is tactile,
+                                story-infused, and unburdened by rigid testing. Learners manipulate physical geometry,
+                                decode musical math rhythms, and cultivate intuitive curiosity.
+                            </p>
+                            <div class="grid grid-cols-2 gap-space-md pt-space-xs">
+                                <div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+                                    <span class="font-label-sm text-label-sm text-on-surface-variant">Core
+                                        Modality</span>
+                                    <span class="font-title text-title text-on-surface" id="stage-modality">Kinesthetic
+                                        Story-Worlds</span>
+                                </div>
+                                <div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+                                    <span class="font-label-sm text-label-sm text-on-surface-variant">Cognitive
+                                        Keystone</span>
+                                    <span class="font-title text-title text-on-surface" id="stage-keystone">Spatial
+                                        Fluidity</span>
+                                </div>
+                            </div>
+                            <!-- Dynamic Quote -->
+                            <div
+                                class="p-space-md bg-secondary-fixed/30 rounded-xl flex items-start gap-space-sm mt-space-xs">
+                                <span class="material-symbols-outlined text-secondary text-[24px]">format_quote</span>
+                                <p class="font-body-sm text-body-sm italic text-on-surface" id="stage-quote">
+                                    “Children do not play to escape learning; they learn by surrendering to immersive
+                                    play.”
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Right Stage Illustrated / SVG Media Stage -->
+                        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                            <div
+                                class="relative w-full aspect-square max-w-[360px] bg-surface-container-low rounded-2xl flex items-center justify-center p-space-lg overflow-hidden shadow-inner">
+                                <div class="w-full h-full flex items-center justify-center transition-all duration-500"
+                                    id="stage-svg-container">
+                                    <!-- Interactive Animated SVG Dial / Planetary Node -->
+                                    <svg class="w-48 h-48 animate-[spin_60s_linear_infinite]" viewbox="0 0 200 200">
+                                        <circle class="text-surface-container-high" cx="100" cy="100" fill="none" r="80"
+                                            stroke="currentColor" stroke-dasharray="6 6" stroke-width="2"></circle>
+                                        <circle class="text-primary-container" cx="100" cy="100" fill="none" r="52"
+                                            stroke="currentColor" stroke-width="3"></circle>
+                                        <circle class="fill-primary" cx="100" cy="48" r="8"></circle>
+                                        <circle class="fill-secondary-container" cx="152" cy="100" r="12"></circle>
+                                        <circle class="fill-tertiary-container" cx="100" cy="152" r="10"></circle>
+                                        <circle class="fill-primary-container" cx="48" cy="100" r="6"></circle>
+                                        <circle class="fill-primary-fixed" cx="100" cy="100" r="24"></circle>
+                                    </svg>
+                                </div>
+                                <div
+                                    class="absolute bottom-space-sm left-space-md right-space-md bg-surface-container-lowest/90 backdrop-blur-sm p-space-xs rounded-lg flex items-center justify-between text-label-sm font-label-sm">
+                                    <span class="text-on-surface-variant">Cognitive Retention Matrix</span>
+                                    <span class="text-tertiary font-bold">+94.6%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 5: Visual Richness (Data & Neuroscience Architecture) -->
+            <section class="w-full max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-margin-lg">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+                    <!-- Visual Editorial Artwork Block -->
+                    <div class="lg:col-span-6 relative">
+                        <div class="w-full h-[460px] rounded-2xl overflow-hidden shadow-xl bg-cover bg-center"
+                            data-alt="Warm natural photograph of a diverse collaborative learning studio with learners engaged in tactile design and hands-on scientific models, soft warm directional sunlight pouring in from expansive windows, warm coral and cream editorial tones."
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwQMpZH04lB-kXPPzc_ujZ5XERtcpT8M9Ttfnavkl0p4Fbua-wSuZZh3hSn21BU3amxEAs7NWUS1dD3kBxYcpS6hhbY-fE3k-GGglxQ9vuv5TEt3D5DTguI6kBN3fYvqKsK39-RbZKFk051wLKQIwTjUV7RLuC8v59RdEPPDIB4J2vxJeHNIiU94k9qf946OXUP1FCCSKeUChPsSSDvdQ7b9CVjpS4l9UQF1haeZ0')">
+                            <div
+                                class="w-full h-full bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent flex flex-col justify-end p-space-xl">
+                                <span
+                                    class="px-space-xs py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm self-start mb-space-xs">Somatic
+                                    Architecture</span>
+                                <h4 class="font-headline-sm text-headline-sm text-on-primary">Ergonomics of the
+                                    Non-Fatigued Mind</h4>
+                                <p class="font-body-sm text-body-sm text-surface-container-low max-w-md">Every
+                                    interaction rhythm, tone, and sound is tuned in partnership with cognitive
+                                    neuroscientists.</p>
+                            </div>
+                        </div>
+                        <!-- Overlapping Stat Badge -->
+                        <div
+                            class="absolute -bottom-6 -right-4 md:right-8 bg-surface-container-lowest p-space-md rounded-xl shadow-xl flex items-center gap-space-md">
+                            <div
+                                class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+                                <span class="material-symbols-outlined text-[28px]">vital_signs</span>
+                            </div>
+                            <div>
+                                <span class="font-headline-sm text-headline-sm text-on-surface block leading-tight">0
+                                    bpm</span>
+                                <span class="font-label-sm text-label-sm text-on-surface-variant">Stress Pulse
+                                    Deviation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quantifiable Proof Points -->
+                    <div class="lg:col-span-6 flex flex-col gap-space-lg">
+                        <div class="flex flex-col gap-space-xs">
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Empirical
+                                Proof</span>
+                            <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">The Joy-Mastery
+                                Paradox Solved</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Standard metrics pit rigor against happiness. Our multi-decade developmental model
+                                demonstrates that joy is the biological prerequisite for sustained deep intellect.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-gutter-md">
+                            <div class="flex flex-col p-space-md bg-surface-container-low rounded-xl">
+                                <span class="font-display text-display text-primary tracking-tight">8.4x</span>
+                                <span class="font-title text-title text-on-surface font-semibold pt-1">Engagement
+                                    Uplift</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">Active voluntary session
+                                    completion over conventional homework.</span>
+                            </div>
+                            <div class="flex flex-col p-space-md bg-surface-container-low rounded-xl">
+                                <span class="font-display text-display text-secondary tracking-tight">180k+</span>
+                                <span class="font-title text-title text-on-surface font-semibold pt-1">Active
+                                    Scholars</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">Spanning 42 nations
+                                    without linguistic or socioeconomic silos.</span>
+                            </div>
+                            <div class="flex flex-col p-space-md bg-surface-container-low rounded-xl">
+                                <span class="font-display text-display text-tertiary tracking-tight">99.2%</span>
+                                <span
+                                    class="font-title text-title text-on-surface font-semibold pt-1">Satisfaction</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">From parents, adult
+                                    fellows, and institutional partners.</span>
+                            </div>
+                            <div class="flex flex-col p-space-md bg-surface-container-low rounded-xl">
+                                <span class="font-display text-display text-on-surface tracking-tight">Zero</span>
+                                <span class="font-title text-title text-on-surface font-semibold pt-1">Graded
+                                    Anxiety</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">Evaluations rely
+                                    entirely on mastery portfolios and creative prototypes.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 6: Stories From The Spectrum (Editorial Carousel / Mosaic) -->
+            <section class="w-full bg-surface-container py-margin-lg">
+                <div
+                    class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col gap-space-xl">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+                        <div>
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Lived
+                                Realities</span>
+                            <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Voices Across
+                                the Continuum</h2>
+                        </div>
+                        <div class="flex items-center gap-space-xs">
+                            <button aria-label="Previous Testimonial"
+                                class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container-high flex items-center justify-center transition-colors"
+                                id="prev-testi" type="button">
+                                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                            </button>
+                            <button aria-label="Next Testimonial"
+                                class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container-high flex items-center justify-center transition-colors"
+                                id="next-testi" type="button">
+                                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Testimonial Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-md" id="testimonials-track">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col justify-between gap-space-md">
+                            <div class="flex flex-col gap-space-sm">
+                                <div class="flex items-center gap-1 text-secondary">
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                    “My 8-year-old taught me astrophysics over Sunday breakfast! She built a miniature
+                                    cosmic orbital system in Studytainment and was genuinely breathless with
+                                    excitement.”
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-space-sm pt-space-sm border-none">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold">
+                                    SM
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-title text-title text-on-surface text-[15px]">Sarah M.</span>
+                                    <span class="font-label-sm text-label-sm text-on-surface-variant">Mother of two •
+                                        London</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col justify-between gap-space-md">
+                            <div class="flex flex-col gap-space-sm">
+                                <div class="flex items-center gap-1 text-secondary">
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                    “Studytainment turned differential calculus into a strategic spatial puzzle game I
+                                    couldn’t put down. It bypassed all my test anxiety and got me into my dream
+                                    aeronautics program.”
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-space-sm pt-space-sm border-none">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold">
+                                    JK
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-title text-title text-on-surface text-[15px]">Julian K.</span>
+                                    <span class="font-label-sm text-label-sm text-on-surface-variant">Age 17 • Honors
+                                        Scholar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-xl rounded-2xl shadow-sm flex flex-col justify-between gap-space-md">
+                            <div class="flex flex-col gap-space-sm">
+                                <div class="flex items-center gap-1 text-secondary">
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span class="material-symbols-outlined text-[18px]"
+                                        style="font-variation-settings: 'FILL' 1;">star</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                    “From medical residency into deep-tech venture building, Studytainment rewired how I
+                                    synthesise complex cross-domain systems in real time. It is true lifelong cognitive
+                                    scaffolding.”
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-space-sm pt-space-sm border-none">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary font-bold">
+                                    EV
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-title text-title text-on-surface text-[15px]">Dr. Elena V.</span>
+                                    <span class="font-label-sm text-label-sm text-on-surface-variant">Age 28 • Venture
+                                        Partner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION 7: Immersive Conversion Finale -->
+            <section class="w-full max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg py-margin-lg">
+                <div
+                    class="relative w-full rounded-3xl bg-inverse-surface text-inverse-on-surface p-space-xl md:p-margin-lg overflow-hidden shadow-2xl">
+                    <!-- Ambient Gradient Flare Inside Card -->
+                    <div
+                        class="absolute -top-32 -right-32 w-96 h-96 bg-primary-container/30 rounded-full blur-3xl pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute -bottom-32 -left-32 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none">
+                    </div>
+                    <div class="relative z-10 max-w-2xl flex flex-col gap-space-md">
+                        <div
+                            class="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface/10 rounded-full backdrop-blur-md self-start">
+                            <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                            <span
+                                class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">14-Day
+                                Discovery Journey</span>
+                        </div>
+                        <h2 class="font-display text-display text-inverse-on-surface tracking-tight leading-tight">
+                            Give Yourself or Your Child the Gift of Effortless Curiosity.
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-surface-container-high font-normal max-w-xl">
+                            Enter an education model where wonder replaces anxiety, and mastery is the natural byproduct
+                            of joy. Instant access to all four interactive modes.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+                            <button
+                                class="st-magnetic-btn px-space-xl py-space-md bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-xl shadow-lg transition-transform active:scale-95 flex items-center gap-space-xs"
+                                type="button">
+                                <span>Start Free Journey</span>
+                                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                            </button>
+                            <span class="font-label-sm text-label-sm text-surface-container-high/70">
+                                No credit card • Cancel anytime • Zero stress guaranteed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 3D Artifact Interactive Modal Preview -->
+            <div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-md hidden items-center justify-center p-space-md"
+                id="tour-modal">
+                <div
+                    class="bg-surface-container-lowest max-w-2xl w-full rounded-2xl p-space-xl shadow-2xl flex flex-col gap-space-md relative">
+                    <button aria-label="Close Modal"
+                        class="absolute top-space-md right-space-md w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface"
+                        id="close-tour-modal" type="button">
+                        <span class="material-symbols-outlined text-[18px]">close</span>
+                    </button>
+                    <span
+                        class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Interactive
+                        Artifact Viewer</span>
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">Spatial Geometry &amp; Curiosity Node
+                        04</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                        This mathematical orbital node represents orbital mechanics for young explorers. Scholars
+                        manipulate gravity wells with gesture inputs, intuitively synthesizing Newton and Kepler before
+                        formal formulas are introduced.
+                    </p>
+                    <div
+                        class="w-full h-56 bg-surface-container-low rounded-xl flex items-center justify-center relative overflow-hidden">
+                        <svg class="w-36 h-36 animate-pulse" viewbox="0 0 200 200">
+                            <circle class="text-primary-container" cx="100" cy="100" fill="none" r="70"
+                                stroke="currentColor" stroke-dasharray="4 8" stroke-width="2"></circle>
+                            <circle class="fill-primary" cx="100" cy="100" r="30"></circle>
+                            <circle class="fill-secondary-container animate-bounce" cx="170" cy="100" r="10"></circle>
+                        </svg>
+                    </div>
+                    <div class="flex justify-end gap-space-sm pt-space-xs">
+                        <button
+                            class="px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high font-label-lg text-label-lg rounded-lg text-on-surface"
+                            id="close-tour-modal-btn" type="button">
+                            Dismiss
+                        </button>
+                        <button
+                            class="px-space-md py-space-sm bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm"
+                            type="button">
+                            Launch Full 3D Sandbox
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Interactive JavaScript -->
+            <script>
+                (function initStudytainment() {
+                    // 1. Custom Smooth Dot + Ring Cursor with Magnetic expansion
+                    const cursorDot = document.getElementById('st-cursor-dot');
+                    const cursorRing = document.getElementById('st-cursor-ring');
+                    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+                    if (!isTouch && !prefersReducedMotion && cursorDot && cursorRing) {
+                        cursorDot.style.opacity = '1';
+                        cursorRing.style.opacity = '1';
+
+                        let mouseX = window.innerWidth / 2;
+                        let mouseY = window.innerHeight / 2;
+                        let ringX = mouseX;
+                        let ringY = mouseY;
+
+                        window.addEventListener('mousemove', (e) => {
+                            mouseX = e.clientX;
+                            mouseY = e.clientY;
+                            cursorDot.style.left = mouseX + 'px';
+                            cursorDot.style.top = mouseY + 'px';
+                        });
+
+                        const renderRing = () => {
+                            ringX += (mouseX - ringX) * 0.18;
+                            ringY += (mouseY - ringY) * 0.18;
+                            cursorRing.style.left = ringX + 'px';
+                            cursorRing.style.top = ringY + 'px';
+                            requestAnimationFrame(renderRing);
+                        };
+                        requestAnimationFrame(renderRing);
+
+                        // Hover expansions
+                        document.querySelectorAll('a, button, .st-tilt-card, .st-stage-btn').forEach((el) => {
+                            el.addEventListener('mouseenter', () => {
+                                cursorRing.classList.add('scale-150', 'bg-primary-container/10', 'border-primary-container');
+                            });
+                            el.addEventListener('mouseleave', () => {
+                                cursorRing.classList.remove('scale-150', 'bg-primary-container/10', 'border-primary-container');
+                            });
+                        });
+                    }
+
+                    // 2. 3D Tilt Cards
+                    const tiltCards = document.querySelectorAll('.st-tilt-card');
+                    tiltCards.forEach((card) => {
+                        card.addEventListener('mousemove', (e) => {
+                            const rect = card.getBoundingClientRect();
+                            const x = e.clientX - rect.left - rect.width / 2;
+                            const y = e.clientY - rect.top - rect.height / 2;
+                            const rotateX = -(y / rect.height) * 16;
+                            const rotateY = (x / rect.width) * 16;
+                            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+                        });
+
+                        card.addEventListener('mouseleave', () => {
+                            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+                        });
+                    });
+
+                    // 3. Continuum Evolutionary Scrubber Data & Switcher
+                    const stages = [
+                        {
+                            num: '1',
+                            age: 'Ages 3–7 • Sensory Wonder',
+                            title: 'The Spark: Somatic Grounding & Natural Wonder',
+                            desc: 'Early neurological pathways develop most durably when learning is tactile, story-infused, and unburdened by rigid testing. Learners manipulate physical geometry, decode musical math rhythms, and cultivate intuitive curiosity.',
+                            modality: 'Kinesthetic Story-Worlds',
+                            keystone: 'Spatial Fluidity',
+                            quote: '“Children do not play to escape learning; they learn by surrendering to immersive play.”'
+                        },
+                        {
+                            num: '2',
+                            age: 'Ages 8–13 • Quest Inquiry',
+                            title: 'The Explorer: Scientific Method as Playful Quest',
+                            desc: 'Transitioning from spontaneous wonder into systemic hypotheses. Learners build operational robotics, run micro-biodomes, and solve ecological mystery narratives in collaborative guilds.',
+                            modality: 'Guild-Based Missions',
+                            keystone: 'Causal Synthesis',
+                            quote: '“Curiosity transforms from an aimless ember into a laser beam of targeted investigation.”'
+                        },
+                        {
+                            num: '3',
+                            age: 'Ages 14–18 • Autonomy & Voice',
+                            title: 'The Catalyst: Social Socratic Inquiry & Prototyping',
+                            desc: 'Adolescent energy channeled into high-leverage creation. Global peer debates, open-source code contributions, and public policy simulations where arguments must withstand rigorous scrutiny.',
+                            modality: 'Socratic Amphitheaters',
+                            keystone: 'Independent Reasoning',
+                            quote: '“Education must not be a lecture endured, but an intellectual sparring ground celebrated.”'
+                        },
+                        {
+                            num: '4',
+                            age: 'Ages 19–24 • Systems Building',
+                            title: 'The Architect: Interdisciplinary Real-World Systems',
+                            desc: 'Higher education re-engineered around live venture projects, algorithmic ethics, and multi-tier systems architecture. Theory translates directly into functional human infrastructure.',
+                            modality: 'Venture Incubation',
+                            keystone: 'Complex Architecture',
+                            quote: '“True mastery happens when you cannot distinguish where academic theory ends and creative output begins.”'
+                        },
+                        {
+                            num: '5',
+                            age: 'Ages 25–30 • Mastery Contribution',
+                            title: 'The Master: Visionary Leadership & Mentorship',
+                            desc: 'Senior fellows lead research collectives, launch public goods, and return as mentors for emerging explorers. The cycle of learning evolves seamlessly into lifelong contribution.',
+                            modality: 'Executive Synthesis',
+                            keystone: 'Generative Legacy',
+                            quote: '“The ultimate proof of learning is the generosity to illuminate the path for those who follow.”'
+                        }
+                    ];
+
+                    const stageBtns = document.querySelectorAll('.st-stage-btn');
+                    const badgeEl = document.getElementById('stage-badge-number');
+                    const ageEl = document.getElementById('stage-age-range');
+                    const titleEl = document.getElementById('stage-title');
+                    const descEl = document.getElementById('stage-desc');
+                    const modalityEl = document.getElementById('stage-modality');
+                    const keystoneEl = document.getElementById('stage-keystone');
+                    const quoteEl = document.getElementById('stage-quote');
+
+                    stageBtns.forEach((btn) => {
+                        btn.addEventListener('click', () => {
+                            stageBtns.forEach(b => {
+                                b.classList.remove('bg-primary-container', 'text-on-primary');
+                                b.classList.add('text-on-surface-variant');
+                            });
+                            btn.classList.add('bg-primary-container', 'text-on-primary');
+                            btn.classList.remove('text-on-surface-variant');
+
+                            const index = parseInt(btn.dataset.stage, 10);
+                            const data = stages[index];
+
+                            if (badgeEl && data) {
+                                badgeEl.textContent = data.num;
+                                ageEl.textContent = data.age;
+                                titleEl.textContent = data.title;
+                                descEl.textContent = data.desc;
+                                modalityEl.textContent = data.modality;
+                                keystoneEl.textContent = data.keystone;
+                                quoteEl.innerHTML = `&ldquo;${data.quote.replace(/[“”"]/g, '')}&rdquo;`;
+                            }
+                        });
+                    });
+
+                    // 4. Modal Triggers
+                    const modal = document.getElementById('tour-modal');
+                    const triggerBtn = document.getElementById('trigger-tour-modal');
+                    const closeBtn = document.getElementById('close-tour-modal');
+                    const closeBtn2 = document.getElementById('close-tour-modal-btn');
+
+                    const openModal = () => {
+                        if (modal) {
+                            modal.classList.remove('hidden');
+                            modal.classList.add('flex');
+                        }
+                    };
+
+                    const closeModal = () => {
+                        if (modal) {
+                            modal.classList.add('hidden');
+                            modal.classList.remove('flex');
+                        }
+                    };
+
+                    if (triggerBtn) triggerBtn.addEventListener('click', openModal);
+                    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+                    if (closeBtn2) closeBtn2.addEventListener('click', closeModal);
+                    if (modal) {
+                        modal.addEventListener('click', (e) => {
+                            if (e.target === modal) closeModal();
+                        });
+                    }
+
+                    // 5. 3D Dock Micro-Feedbacks
+                    const toggleWire = document.getElementById('toggle-3d-wire');
+                    if (toggleWire) {
+                        let isWire = false;
+                        toggleWire.addEventListener('click', () => {
+                            isWire = !isWire;
+                            toggleWire.classList.toggle('bg-primary-container');
+                            toggleWire.classList.toggle('text-on-primary');
+                        });
+                    }
+                })();
+            </script>
+        </div>
+    </main>
+    <footer
+        class="w-full bg-surface-container-low text-on-surface pt-margin-lg pb-margin-md shadow-[0_-1px_8px_rgba(24,27,32,0.02)]">
+        <div class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-lg pb-margin-lg">
+                <div class="lg:col-span-5 flex flex-col gap-space-md">
+                    <div class="flex items-center gap-space-xs"><span
+                            class="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_#ff5733]"></span><span
+                            class="font-headline-md text-headline-md tracking-tight text-on-surface">Studytainment</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md">An integrated learning and
+                        human-development ecosystem spanning ages 3 to 30. Designed with tactile warmth, academic rigor,
+                        and radiant optimism so growth never feels like a burden.</p>
+                    <form
+                        class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-xs mt-space-sm max-w-md">
+                        <input
+                            class="flex-1 px-space-md py-space-sm bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-container transition-all placeholder:text-on-surface-variant/60"
+                            placeholder="Enter your email for dispatches" type="email" /><button
+                            class="px-space-lg py-space-sm bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-lg transition-all"
+                            type="button">Subscribe</button>
+                    </form>
+                </div>
+                <div class="lg:col-span-3 flex flex-col gap-space-sm"><span
+                        class="font-title text-title text-on-surface">Lifelong Pathways</span>
+                    <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+                        <li><a class="hover:text-primary transition-colors" data-path="3-30-continuum"
+                                href="#">Foundation Explorers (Ages 3–7)</a></li>
+                        <li><a class="hover:text-primary transition-colors" data-path="3-30-continuum"
+                                href="#">Curiosity Lab (Ages 8–14)</a></li>
+                        <li><a class="hover:text-primary transition-colors" data-path="3-30-continuum" href="#">Autonomy
+                                &amp; Mastery (Ages 15–21)</a></li>
+                        <li><a class="hover:text-primary transition-colors" data-path="3-30-continuum" href="#">Vanguard
+                                Specialists (Ages 22–30)</a></li>
+                        <li><a class="hover:text-primary transition-colors" data-path="the-4-modes" href="#">Synchronous
+                                Play Modalities</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+                        class="font-title text-title text-on-surface">Documentation</span>
+                    <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+                        <li><a class="hover:text-primary transition-colors" data-path="ecosystem" href="#">Core
+                                Manifesto</a></li>
+                        <li><a class="hover:text-primary transition-colors" data-path="the-4-modes" href="#">4 Modes
+                                Architecture</a></li>
+                        <li><a class="hover:text-primary transition-colors" data-path="impact" href="#">Longitudinal
+                                Metrics</a></li>
+                        <li><a class="hover:text-primary transition-colors" data-path="stories" href="#">Learner Case
+                                Studies</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Safety &amp; Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2 flex flex-col gap-space-sm"><span
+                        class="font-title text-title text-on-surface">Channels</span>
+                    <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-space-xs"
+                                href="#"><span
+                                    class="material-symbols-outlined text-[18px]">podcasts</span>Dispatches</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-space-xs"
+                                href="#"><span class="material-symbols-outlined text-[18px]">forum</span>Community</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-space-xs"
+                                href="#"><span
+                                    class="material-symbols-outlined text-[18px]">menu_book</span>Publications</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-space-xs"
+                                href="#"><span class="material-symbols-outlined text-[18px]">mail</span>Editorial
+                                Desk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+                <p>© 2025 Studytainment Ecosystem. All rights reserved.</p>
+                <div class="flex items-center gap-space-lg font-label-sm text-label-sm"><span>Warm Editorial
+                        Modernism</span><span>Crafted for Ages 3–30</span></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
