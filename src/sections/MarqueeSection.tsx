@@ -1,3 +1,4 @@
+import { div } from "three/src/nodes/math/OperatorNode.js";
 const MARQUEE_ITEMS: ReadonlyArray<{ text: string; highlighted?: boolean }> = [
   { text: 'Curiosity Labs' },
   { text: 'Neuroscience of Play' },
@@ -14,14 +15,14 @@ function MarqueeGroupContent() {
   return (
     <>
       {MARQUEE_ITEMS.map((item) => (
-        <div>
+        <>
           <span key={`${item.text}-bullet`} aria-hidden="true" className="p-5">
             •
           </span>
           <span key={item.text} className={item.highlighted ? 'text-primary font-bold' : undefined}>
             {item.text}
           </span>
-        </div>
+        </>
       ))}
     </>
   )
