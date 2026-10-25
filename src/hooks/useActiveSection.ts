@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { headerNavLinks } from '../data/navigation'
+import { headerSectionIds } from '../data/navigation'
 import type { SectionId } from '../types'
 
-const NAV_SECTION_IDS = headerNavLinks.map((link) => link.sectionId)
+const NAV_SECTION_IDS = headerSectionIds
 
 /**
  * Determines which navigation section is currently in view based on scroll

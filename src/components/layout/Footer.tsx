@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ComponentType, FormEvent, PointerEvent } from 'react'
+import { useLocation } from 'react-router-dom'
 import {
   AnimatePresence,
   motion,
@@ -33,8 +34,8 @@ const GRID_SIZE = 40
 /** Replace these hrefs with your real routes / section ids. */
 const EXPLORE_LINKS: ReadonlyArray<{ label: string; href: string }> = [
   { label: 'Home', href: '#ecosystem' },
-  { label: 'Own Pace Academy', href: '#the-4-modes' },
-  { label: 'Our Story', href: '#stories' },
+  { label: 'Own Pace Academy', href: '/own-pace-academy' },
+  { label: 'Our Story', href: '/our-story' },
   { label: 'Contact', href: '#footer' },
 ]
 
@@ -419,11 +420,13 @@ function LinkColumn({
   links,
   index,
   reducedMotion,
+  anchorPrefix,
 }: {
   title: string
   links: ReadonlyArray<{ label: string; href: string }>
   index: number
   reducedMotion: boolean
+  anchorPrefix: string
 }) {
   return (
     <motion.div
@@ -437,18 +440,21 @@ function LinkColumn({
         {title}
       </span>
       <ul className="flex flex-col gap-3 text-[#f5efe3]">
-        {links.map((link) => (
-          <li key={link.label}>
-            <motion.a
-              href={link.href}
-              whileHover={reducedMotion ? undefined : { x: 6 }}
-              transition={{ type: 'spring', stiffness: 360, damping: 22 }}
-              className="inline-block transition-colors hover:text-[#ffd23f] focus-visible:text-[#ffd23f] focus-visible:outline-none"
-            >
-              {link.label}
-            </motion.a>
-          </li>
-        ))}
+        {links.map((link) => {
+          const href = link.href.startsWith('#') ? `${anchorPrefix}${link.href}` : link.href
+          return (
+            <li key={link.label}>
+              <motion.a
+                href={href}
+                whileHover={reducedMotion ? undefined : { x: 6 }}
+                transition={{ type: 'spring', stiffness: 360, damping: 22 }}
+                className="inline-block transition-colors hover:text-[#ffd23f] focus-visible:text-[#ffd23f] focus-visible:outline-none"
+              >
+                {link.label}
+              </motion.a>
+            </li>
+          )
+        })}
       </ul>
     </motion.div>
   )
@@ -459,6 +465,9 @@ export function Footer() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<FormStatus>({ kind: 'idle', message: '' })
   const reducedMotion = useReducedMotion()
+  const { pathname } = useLocation()
+  // Away from the home page, anchor links must point back to "/#section".
+  const anchorPrefix = pathname === '/' ? '' : '/'
 
   // Cursor spotlight (px relative to the footer).
   const spotX = useMotionValue(520)
@@ -733,12 +742,19 @@ export function Footer() {
             </p>
           </motion.div>
 
-          <LinkColumn title="Explore" links={EXPLORE_LINKS} index={1} reducedMotion={reducedMotion} />
+          <LinkColumn
+            title="Explore"
+            links={EXPLORE_LINKS}
+            index={1}
+            reducedMotion={reducedMotion}
+            anchorPrefix={anchorPrefix}
+          />
           <LinkColumn
             title="Ecosystem"
             links={ECOSYSTEM_LINKS}
             index={2}
             reducedMotion={reducedMotion}
+            anchorPrefix={anchorPrefix}
           />
 
           {/* Say hello */}

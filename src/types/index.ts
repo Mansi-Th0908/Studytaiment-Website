@@ -51,7 +51,10 @@ export interface Testimonial {
 
 export interface NavLinkItem {
   label: string
-  sectionId: SectionId
+  /** Anchor target for in-page navigation (shared single-page sections). */
+  sectionId?: SectionId
+  /** Router route for standalone pages, e.g. "/our-story". */
+  route?: string
 }
 
 export interface FooterLinkItem {

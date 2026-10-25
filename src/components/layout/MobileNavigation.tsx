@@ -7,13 +7,16 @@ interface MobileNavigationProps {
   open: boolean
   onClose: () => void
   activeSection: SectionId
+  /** True when the menu is rendered on the home page (anchors stay in-page). */
+  onHome?: boolean
 }
 
 /**
  * Responsive navigation panel shown below the header on small screens.
  * Closes on link selection and on Escape.
  */
-export function MobileNavigation({ open, onClose, activeSection }: MobileNavigationProps) {
+export function MobileNavigation({ open, onClose, activeSection, onHome = true }: MobileNavigationProps) {
+  const anchorPrefix = onHome ? '' : '/'
   useEffect(() => {
     if (!open) return
 
@@ -37,11 +40,11 @@ export function MobileNavigation({ open, onClose, activeSection }: MobileNavigat
         className="flex flex-col gap-1 p-space-sm mx-auto max-w-[var(--content-max-width)]"
       >
         {headerNavLinks.map((link) => {
-          const isActive = activeSection === link.sectionId
+          const isActive = link.route ? false : activeSection === link.sectionId
           return (
             <a
-              key={link.sectionId}
-              href={`#${link.sectionId}`}
+              key={link.label}
+              href={link.route ?? `${anchorPrefix}#${link.sectionId}`}
               aria-current={isActive ? 'page' : undefined}
               onClick={onClose}
               className={cn(
@@ -56,7 +59,7 @@ export function MobileNavigation({ open, onClose, activeSection }: MobileNavigat
           )
         })}
         <a
-          href="#explore-pathways"
+          href={`${anchorPrefix}#explore-pathways`}
           onClick={onClose}
           className="mt-1 inline-flex items-center justify-center px-space-lg py-space-sm bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all"
         >
