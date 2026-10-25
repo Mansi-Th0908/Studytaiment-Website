@@ -1,4 +1,4 @@
-import { div } from "three/src/nodes/math/OperatorNode.js";
+
 const MARQUEE_ITEMS: ReadonlyArray<{ text: string; highlighted?: boolean }> = [
   { text: 'Curiosity Labs' },
   { text: 'Neuroscience of Play' },
