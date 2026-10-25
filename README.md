@@ -72,3 +72,4 @@ honest, clearly scoped local behavior instead of faking success:
   `ArtifactModal.tsx` to a real destination; with none configured it focuses the site's own
   interactive 3D hero scene.
 - The header **Focus Sound** toggle is a real Web Audio ambience (generated noise pad).
+# Studytaiment-Website
