@@ -248,7 +248,7 @@ export function StoryProblemSection() {
             ))}
 
             {/* Learning Feature Card */}
-            <motion.div
+            {/* <motion.div
               className="absolute right-0 top-[20%] z-0 w-[31%] max-w-[150px] overflow-hidden rounded-xl border-[3px] border-white shadow-lg sm:right-[3%] sm:max-w-[190px] md:right-[7%] md:max-w-[220px]"
               initial={reducedMotion ? false : { opacity: 0, x: 18 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -267,7 +267,7 @@ export function StoryProblemSection() {
                   ease: 'easeInOut',
                 }}
               />
-            </motion.div>
+            </motion.div> */}
 
             {/* Main Nova Character */}
             <motion.div

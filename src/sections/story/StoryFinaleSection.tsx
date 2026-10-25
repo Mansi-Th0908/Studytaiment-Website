@@ -150,12 +150,12 @@ export function StoryFinaleSection() {
         </Reveal>
 
         {/* rolling sparkle hills closing the book */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-0">
+        {/* <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 z-0">
           <svg viewBox="0 0 1440 150" preserveAspectRatio="none" className="block h-[120px] w-full md:h-[160px]">
             <path d="M0 90 Q260 20 520 84 T1000 70 T1440 88 L1440 150 L0 150 Z" fill="#77ddb4" opacity="0.75" />
             <path d="M0 120 Q360 66 720 116 T1440 112 L1440 150 L0 150 Z" fill="#4db98d" opacity="0.9" />
           </svg>
-        </div>
+        </div> */}
       </div>
     </section>
   )
